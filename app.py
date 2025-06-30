@@ -44,7 +44,7 @@ def login():
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        flash(f"{form.name.data} - {form.email.data} received", "successed")
+        flash(f"{form.name.data} - {form.email.data} received", "success")
     return render_template("contact.html", form=form)
 
 if __name__ == "__main__":
