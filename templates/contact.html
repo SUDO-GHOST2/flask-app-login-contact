@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact</title></head>
+<body>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name(size=32) }}<br>
+        {{ form.email.label }} {{ form.email(size=32) }}<br>
+        {{ form.submit() }}
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <p style="color:green;">{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+</body>
+</html>
